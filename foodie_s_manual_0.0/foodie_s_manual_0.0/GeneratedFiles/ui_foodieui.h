@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_FoodieUIClass
+class Ui_FoodieUI
 {
 public:
     QAction *actionHelp;
@@ -40,16 +40,16 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
-    void setupUi(QMainWindow *FoodieUIClass)
+    void setupUi(QMainWindow *FoodieUI)
     {
-        if (FoodieUIClass->objectName().isEmpty())
-            FoodieUIClass->setObjectName(QStringLiteral("FoodieUIClass"));
-        FoodieUIClass->resize(1013, 792);
-        actionHelp = new QAction(FoodieUIClass);
+        if (FoodieUI->objectName().isEmpty())
+            FoodieUI->setObjectName(QStringLiteral("FoodieUI"));
+        FoodieUI->resize(1013, 792);
+        actionHelp = new QAction(FoodieUI);
         actionHelp->setObjectName(QStringLiteral("actionHelp"));
-        actionVersion = new QAction(FoodieUIClass);
+        actionVersion = new QAction(FoodieUI);
         actionVersion->setObjectName(QStringLiteral("actionVersion"));
-        centralWidget = new QWidget(FoodieUIClass);
+        centralWidget = new QWidget(FoodieUI);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
         horizontalLayout->setSpacing(6);
@@ -65,41 +65,41 @@ public:
 
         horizontalLayout->addWidget(textBrowser);
 
-        FoodieUIClass->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(FoodieUIClass);
+        FoodieUI->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(FoodieUI);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1013, 23));
         menuAbout = new QMenu(menuBar);
         menuAbout->setObjectName(QStringLiteral("menuAbout"));
-        FoodieUIClass->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(FoodieUIClass);
+        FoodieUI->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(FoodieUI);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        FoodieUIClass->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(FoodieUIClass);
+        FoodieUI->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(FoodieUI);
         statusBar->setObjectName(QStringLiteral("statusBar"));
-        FoodieUIClass->setStatusBar(statusBar);
+        FoodieUI->setStatusBar(statusBar);
 
         menuBar->addAction(menuAbout->menuAction());
         menuAbout->addAction(actionVersion);
         menuAbout->addAction(actionHelp);
 
-        retranslateUi(FoodieUIClass);
+        retranslateUi(FoodieUI);
 
-        QMetaObject::connectSlotsByName(FoodieUIClass);
+        QMetaObject::connectSlotsByName(FoodieUI);
     } // setupUi
 
-    void retranslateUi(QMainWindow *FoodieUIClass)
+    void retranslateUi(QMainWindow *FoodieUI)
     {
-        FoodieUIClass->setWindowTitle(QApplication::translate("FoodieUIClass", "FoodieUI", 0));
-        actionHelp->setText(QApplication::translate("FoodieUIClass", "Help", 0));
-        actionVersion->setText(QApplication::translate("FoodieUIClass", "Version", 0));
-        menuAbout->setTitle(QApplication::translate("FoodieUIClass", "About", 0));
+        FoodieUI->setWindowTitle(QApplication::translate("FoodieUI", "FoodieUI", 0));
+        actionHelp->setText(QApplication::translate("FoodieUI", "Help", 0));
+        actionVersion->setText(QApplication::translate("FoodieUI", "Version", 0));
+        menuAbout->setTitle(QApplication::translate("FoodieUI", "About", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class FoodieUIClass: public Ui_FoodieUIClass {};
+    class FoodieUI: public Ui_FoodieUI {};
 } // namespace Ui
 
 QT_END_NAMESPACE

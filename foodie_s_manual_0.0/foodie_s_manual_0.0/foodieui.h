@@ -13,7 +13,7 @@ public:
 	~FoodieUI();
 
 private:
-	Ui::FoodieUIClass ui;
+	Ui::FoodieUI ui;
 };
 
 #endif // FOODIEUI_H
