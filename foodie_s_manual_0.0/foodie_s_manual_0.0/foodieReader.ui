@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FoodieCover</class>
- <widget class="QWidget" name="FoodieCover">
+ <class>FoodieReader</class>
+ <widget class="QWidget" name="FoodieReader">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,23 +10,14 @@
     <height>786</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1938</width>
-    <height>1218</height>
-   </size>
-  </property>
   <property name="cursor">
-   <cursorShape>OpenHandCursor</cursorShape>
+   <cursorShape>PointingHandCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>FoodieCover</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -35,7 +26,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="foodieui.qrc">:/FoodieUI/Resouce/kaola.png</pixmap>
+      <pixmap resource="foodieui.qrc">:/FoodieUI/Resouce/food2.jpg</pixmap>
      </property>
     </widget>
    </item>

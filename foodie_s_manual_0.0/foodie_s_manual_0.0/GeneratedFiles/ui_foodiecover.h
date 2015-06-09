@@ -31,8 +31,13 @@ public:
         if (FoodieCover->objectName().isEmpty())
             FoodieCover->setObjectName(QStringLiteral("FoodieCover"));
         FoodieCover->resize(1042, 786);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(FoodieCover->sizePolicy().hasHeightForWidth());
+        FoodieCover->setSizePolicy(sizePolicy);
+        FoodieCover->setMaximumSize(QSize(1938, 1218));
         FoodieCover->setCursor(QCursor(Qt::OpenHandCursor));
-        FoodieCover->setAutoFillBackground(false);
         verticalLayout = new QVBoxLayout(FoodieCover);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);

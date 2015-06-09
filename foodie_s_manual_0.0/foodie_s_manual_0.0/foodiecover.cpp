@@ -2,17 +2,12 @@
 
 FoodieCover::FoodieCover(QWidget *parent)
 	: QWidget(parent)
+	, _isDrab(false)
 {
 	ui.setupUi(this);
-	setWindowOpacity(0.8);
+	
 	setWindowFlags(Qt::FramelessWindowHint);
 	setAttribute(Qt::WA_TranslucentBackground);
-
-	//setAutoFillBackground(true);
-	//palette.setBrush(QPalette::Background, QBrush(QPixmap(":/FoodieUI/Resource/kaola.png")));
-	//setPalette(palette);
-
-	//showFullScreen();
 }
 
 FoodieCover::~FoodieCover()
@@ -20,12 +15,12 @@ FoodieCover::~FoodieCover()
 
 }
 
-void FoodieCover::mousePressEvent(QMouseEvent *event)
+void FoodieCover::mousePressEvent(QMouseEvent *evn)
 {
-	if(event->button() == Qt::LeftButton)
+	if(evn->button() == Qt::LeftButton)
 	{
 		QPoint windowPos = pos();
-		QPoint mousePos = event->globalPos();
+		QPoint mousePos = evn->globalPos();
 		dPos = mousePos - windowPos;
 
 		_cursor = cursor();
@@ -33,16 +28,26 @@ void FoodieCover::mousePressEvent(QMouseEvent *event)
 	}
 }  
 
-void FoodieCover::mouseMoveEvent(QMouseEvent *event)
+void FoodieCover::mouseMoveEvent(QMouseEvent *evn)
 {
-	if (event->buttons() & Qt::LeftButton)
+	if (evn->buttons() & Qt::LeftButton)
 	{
-		move(event->globalPos() - dPos);
-		event->accept();
+		_isDrab = true;
+		move(evn->globalPos() - dPos);
+		evn->accept();
 	}
 }
 
 void FoodieCover::mouseReleaseEvent(QMouseEvent* evn)
 {
 	setCursor(_cursor);
+	if(! _isDrab)
+	{
+		hide();
+		emit coverClick();
+	}
+	else
+	{
+		_isDrab = false;
+	}
 }

@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include <QMouseEvent>
-#include <QPainter>
 #include "ui_foodiecover.h"
 
 class FoodieCover : public QWidget
@@ -14,15 +13,19 @@ public:
 	FoodieCover(QWidget *parent = 0);
 	~FoodieCover();
 
+signals:
+	void coverClick(void);
+	
 private:
 	void mousePressEvent(QMouseEvent *evn);
 	void mouseMoveEvent(QMouseEvent *evn);
 	void mouseReleaseEvent(QMouseEvent* evn);
-	
+
 private:
 	Ui::FoodieCover ui;
 
 	QPoint dPos;
+	bool _isDrab;
 	QPalette palette;
 
 	QCursor _cursor;

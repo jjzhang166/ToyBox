@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FoodieUI</class>
- <widget class="QMainWindow" name="FoodieUI">
+ <class>FoodieEditer</class>
+ <widget class="QMainWindow" name="FoodieEditer">
   <property name="geometry">
    <rect>
     <x>0</x>

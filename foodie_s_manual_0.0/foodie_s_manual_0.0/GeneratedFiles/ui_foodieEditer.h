@@ -1,13 +1,13 @@
 /********************************************************************************
-** Form generated from reading UI file 'foodieui.ui'
+** Form generated from reading UI file 'foodieEditer.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_FOODIEUI_H
-#define UI_FOODIEUI_H
+#ifndef UI_FOODIEEDITER_H
+#define UI_FOODIEEDITER_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -26,7 +26,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_FoodieUI
+class Ui_FoodieEditer
 {
 public:
     QAction *actionHelp;
@@ -40,16 +40,16 @@ public:
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
-    void setupUi(QMainWindow *FoodieUI)
+    void setupUi(QMainWindow *FoodieEditer)
     {
-        if (FoodieUI->objectName().isEmpty())
-            FoodieUI->setObjectName(QStringLiteral("FoodieUI"));
-        FoodieUI->resize(1013, 792);
-        actionHelp = new QAction(FoodieUI);
+        if (FoodieEditer->objectName().isEmpty())
+            FoodieEditer->setObjectName(QStringLiteral("FoodieEditer"));
+        FoodieEditer->resize(1013, 792);
+        actionHelp = new QAction(FoodieEditer);
         actionHelp->setObjectName(QStringLiteral("actionHelp"));
-        actionVersion = new QAction(FoodieUI);
+        actionVersion = new QAction(FoodieEditer);
         actionVersion->setObjectName(QStringLiteral("actionVersion"));
-        centralWidget = new QWidget(FoodieUI);
+        centralWidget = new QWidget(FoodieEditer);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         horizontalLayout = new QHBoxLayout(centralWidget);
         horizontalLayout->setSpacing(6);
@@ -65,43 +65,43 @@ public:
 
         horizontalLayout->addWidget(textBrowser);
 
-        FoodieUI->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(FoodieUI);
+        FoodieEditer->setCentralWidget(centralWidget);
+        menuBar = new QMenuBar(FoodieEditer);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1013, 23));
         menuAbout = new QMenu(menuBar);
         menuAbout->setObjectName(QStringLiteral("menuAbout"));
-        FoodieUI->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(FoodieUI);
+        FoodieEditer->setMenuBar(menuBar);
+        mainToolBar = new QToolBar(FoodieEditer);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        FoodieUI->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        statusBar = new QStatusBar(FoodieUI);
+        FoodieEditer->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        statusBar = new QStatusBar(FoodieEditer);
         statusBar->setObjectName(QStringLiteral("statusBar"));
-        FoodieUI->setStatusBar(statusBar);
+        FoodieEditer->setStatusBar(statusBar);
 
         menuBar->addAction(menuAbout->menuAction());
         menuAbout->addAction(actionVersion);
         menuAbout->addAction(actionHelp);
 
-        retranslateUi(FoodieUI);
+        retranslateUi(FoodieEditer);
 
-        QMetaObject::connectSlotsByName(FoodieUI);
+        QMetaObject::connectSlotsByName(FoodieEditer);
     } // setupUi
 
-    void retranslateUi(QMainWindow *FoodieUI)
+    void retranslateUi(QMainWindow *FoodieEditer)
     {
-        FoodieUI->setWindowTitle(QApplication::translate("FoodieUI", "FoodieUI", 0));
-        actionHelp->setText(QApplication::translate("FoodieUI", "Help", 0));
-        actionVersion->setText(QApplication::translate("FoodieUI", "Version", 0));
-        menuAbout->setTitle(QApplication::translate("FoodieUI", "About", 0));
+        FoodieEditer->setWindowTitle(QApplication::translate("FoodieEditer", "FoodieUI", 0));
+        actionHelp->setText(QApplication::translate("FoodieEditer", "Help", 0));
+        actionVersion->setText(QApplication::translate("FoodieEditer", "Version", 0));
+        menuAbout->setTitle(QApplication::translate("FoodieEditer", "About", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class FoodieUI: public Ui_FoodieUI {};
+    class FoodieEditer: public Ui_FoodieEditer {};
 } // namespace Ui
 
 QT_END_NAMESPACE
 
-#endif // UI_FOODIEUI_H
+#endif // UI_FOODIEEDITER_H
