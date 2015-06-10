@@ -38,13 +38,16 @@ public:
         FoodieCover->setSizePolicy(sizePolicy);
         FoodieCover->setMaximumSize(QSize(1938, 1218));
         FoodieCover->setCursor(QCursor(Qt::OpenHandCursor));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/FoodieUI/Resouces/turtle.png"), QSize(), QIcon::Normal, QIcon::Off);
+        FoodieCover->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(FoodieCover);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label = new QLabel(FoodieCover);
         label->setObjectName(QStringLiteral("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resouce/kaola.png")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resouces/kaola.png")));
 
         verticalLayout->addWidget(label);
 

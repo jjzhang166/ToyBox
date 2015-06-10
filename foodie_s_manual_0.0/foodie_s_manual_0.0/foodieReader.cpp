@@ -1,7 +1,7 @@
 #include "foodieReader.h"
 
-FoodieReader::FoodieReader(QWidget *parent)
-	: QWidget(parent)
+FoodieReader::FoodieReader(UiManager* um, QWidget *parent)
+	: QWidget(parent), FoodieUi(um, parent)
 {
 	ui.setupUi(this);
 	setWindowOpacity(0.8);
@@ -12,7 +12,7 @@ FoodieReader::FoodieReader(QWidget *parent)
 	//palette.setBrush(QPalette::Background, QBrush(QPixmap(":/FoodieEditer/Resource/kaola.png")));
 	//setPalette(palette);
 
-	//showFullScreen();
+	showFullScreen();
 }
 
 FoodieReader::~FoodieReader()
@@ -20,22 +20,23 @@ FoodieReader::~FoodieReader()
 
 }
 
-void FoodieReader::readerShow(void)
+void FoodieReader::mousePressEvent(QMouseEvent *evn)
 {
-	showFullScreen();
-}
-
-void FoodieReader::mousePressEvent(QMouseEvent *event)
-{
+	if(evn->button() == Qt::LeftButton)
+	{
 		_cursor = cursor();
 		setCursor(Qt::ClosedHandCursor);
+	}
 }  
 
-void FoodieReader::mouseMoveEvent(QMouseEvent *event)
+void FoodieReader::mouseMoveEvent(QMouseEvent *evn)
 {
 }
 
 void FoodieReader::mouseReleaseEvent(QMouseEvent* evn)
 {
-	setCursor(_cursor);
+	if(evn->button() == Qt::LeftButton)
+	{
+		setCursor(_cursor);
+	}
 }

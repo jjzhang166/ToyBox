@@ -39,7 +39,7 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label = new QLabel(FoodieReader);
         label->setObjectName(QStringLiteral("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resouce/food2.jpg")));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resouces/food2.jpg")));
 
         verticalLayout->addWidget(label);
 

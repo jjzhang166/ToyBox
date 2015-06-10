@@ -1,18 +1,20 @@
 #include "foodiecover.h"
 
-FoodieCover::FoodieCover(QWidget *parent)
-	: QWidget(parent)
+FoodieCover::FoodieCover(UiManager* um, QWidget *parent)
+	: QWidget(parent), FoodieUi(um, parent)
 	, _isDrab(false)
 {
 	ui.setupUi(this);
 	
 	setWindowFlags(Qt::FramelessWindowHint);
 	setAttribute(Qt::WA_TranslucentBackground);
+
+	show();
 }
 
 FoodieCover::~FoodieCover()
 {
-
+	//hide();
 }
 
 void FoodieCover::mousePressEvent(QMouseEvent *evn)
@@ -34,20 +36,21 @@ void FoodieCover::mouseMoveEvent(QMouseEvent *evn)
 	{
 		_isDrab = true;
 		move(evn->globalPos() - dPos);
-		evn->accept();
 	}
 }
 
 void FoodieCover::mouseReleaseEvent(QMouseEvent* evn)
 {
-	setCursor(_cursor);
-	if(! _isDrab)
+	if(evn->button() == Qt::LeftButton)
 	{
-		hide();
-		emit coverClick();
-	}
-	else
-	{
-		_isDrab = false;
+		setCursor(_cursor);
+		if(! _isDrab)
+		{
+			emit FoodieUi::uiMsgSender(COVER_CLICK);
+		}
+		else
+		{
+			_isDrab = false;
+		}
 	}
 }

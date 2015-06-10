@@ -5,17 +5,16 @@
 #include <QPainter>
 #include "ui_foodieReader.h"
 
-class FoodieReader : public QWidget
+#include "foodieui.h"
+
+class FoodieReader : public QWidget, public FoodieUi
 {
 	Q_OBJECT
 
 public:
-	FoodieReader(QWidget *parent = 0);
+	FoodieReader(UiManager* um, QWidget *parent = 0);
 	~FoodieReader();
-
-public slots:
-	void readerShow(void);
-
+	
 private:
 	void mousePressEvent(QMouseEvent *evn);
 	void mouseMoveEvent(QMouseEvent *evn);

@@ -1,7 +1,7 @@
 #include "foodieEditer.h"
 
-FoodieEditer::FoodieEditer(QWidget *parent)
-	: QMainWindow(parent)
+FoodieEditer::FoodieEditer(UiManager* um, QWidget *parent)
+	: QMainWindow(parent), FoodieUi(um, parent)
 {
 	ui.setupUi(this);
 }

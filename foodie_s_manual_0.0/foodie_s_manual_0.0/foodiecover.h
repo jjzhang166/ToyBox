@@ -5,16 +5,17 @@
 #include <QMouseEvent>
 #include "ui_foodiecover.h"
 
-class FoodieCover : public QWidget
+#include "UiMsgType.h"
+#include "foodieui.h"
+
+class FoodieCover : public QWidget, public FoodieUi
 {
 	Q_OBJECT
 
 public:
-	FoodieCover(QWidget *parent = 0);
+	FoodieCover(UiManager* um, QWidget *parent = 0);
 	~FoodieCover();
 
-signals:
-	void coverClick(void);
 	
 private:
 	void mousePressEvent(QMouseEvent *evn);
