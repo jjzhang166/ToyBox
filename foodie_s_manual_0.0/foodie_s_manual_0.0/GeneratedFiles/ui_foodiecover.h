@@ -39,7 +39,7 @@ public:
         FoodieCover->setMaximumSize(QSize(1938, 1218));
         FoodieCover->setCursor(QCursor(Qt::OpenHandCursor));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/FoodieUI/Resouces/turtle.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/FoodieUI/Resouces/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
         FoodieCover->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(FoodieCover);
         verticalLayout->setSpacing(6);

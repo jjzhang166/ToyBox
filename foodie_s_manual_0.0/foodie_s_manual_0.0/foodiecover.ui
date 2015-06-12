@@ -30,7 +30,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="foodieui.qrc">
-    <normaloff>:/FoodieUI/Resouces/turtle.png</normaloff>:/FoodieUI/Resouces/turtle.png</iconset>
+    <normaloff>:/FoodieUI/Resouces/cake.png</normaloff>:/FoodieUI/Resouces/cake.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

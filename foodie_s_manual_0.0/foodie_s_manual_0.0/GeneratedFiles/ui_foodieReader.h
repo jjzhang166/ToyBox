@@ -32,6 +32,9 @@ public:
             FoodieReader->setObjectName(QStringLiteral("FoodieReader"));
         FoodieReader->resize(1042, 786);
         FoodieReader->setCursor(QCursor(Qt::PointingHandCursor));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/FoodieUI/Resouces/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
+        FoodieReader->setWindowIcon(icon);
         FoodieReader->setAutoFillBackground(false);
         verticalLayout = new QVBoxLayout(FoodieReader);
         verticalLayout->setSpacing(6);

@@ -16,6 +16,10 @@
   <property name="windowTitle">
    <string>FoodieCover</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="foodieui.qrc">
+    <normaloff>:/FoodieUI/Resouces/cake.png</normaloff>:/FoodieUI/Resouces/cake.png</iconset>
+  </property>
   <property name="autoFillBackground">
    <bool>false</bool>
   </property>
