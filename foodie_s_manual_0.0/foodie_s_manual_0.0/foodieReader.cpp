@@ -40,3 +40,14 @@ void FoodieReader::mouseReleaseEvent(QMouseEvent* evn)
 		setCursor(_cursor);
 	}
 }
+
+
+bool FoodieReader::store()
+{
+	return true;
+}
+
+bool FoodieReader::restore()
+{
+	return true;
+}

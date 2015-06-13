@@ -7,6 +7,15 @@
 
 #include "foodieui.h"
 
+#pragma pack(1)
+
+struct StoredMsg
+{
+};
+
+#pragma pack()
+
+
 class FoodieReader : public QWidget, public FoodieUi
 {
 	Q_OBJECT
@@ -14,6 +23,9 @@ class FoodieReader : public QWidget, public FoodieUi
 public:
 	FoodieReader(UiManager* um, QWidget *parent = 0);
 	~FoodieReader();
+
+	bool store(void);
+	bool restore(void);
 	
 private:
 	void mousePressEvent(QMouseEvent *evn);

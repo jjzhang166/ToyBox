@@ -45,6 +45,9 @@ public:
         if (FoodieEditer->objectName().isEmpty())
             FoodieEditer->setObjectName(QStringLiteral("FoodieEditer"));
         FoodieEditer->resize(1013, 792);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/FoodieUI/Resources/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
+        FoodieEditer->setWindowIcon(icon);
         actionHelp = new QAction(FoodieEditer);
         actionHelp->setObjectName(QStringLiteral("actionHelp"));
         actionVersion = new QAction(FoodieEditer);

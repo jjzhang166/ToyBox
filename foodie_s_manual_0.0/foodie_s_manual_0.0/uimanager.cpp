@@ -21,10 +21,25 @@ void UiManager::uiMsgProc(UiMsgType type)
 	{
 	case COVER_CLICK:
 		{
-			delete m_fc;
-			m_fc = NULL;
+			DEL(m_fc);
 
 			m_fr = new FoodieReader(this);
+			break;
+		}
+	case READER_SWITCH_TO_EDITER:
+		{
+			m_fr->store();
+			DEL(m_fr);
+
+			m_fe = new FoodieEditer(this);
+			break;
+		}
+	case EDITER_SWITCH_TO_READER:
+		{
+			DEL(m_fe);
+
+			m_fr = new FoodieReader(this);
+			m_fr->restore();
 			break;
 		}
 

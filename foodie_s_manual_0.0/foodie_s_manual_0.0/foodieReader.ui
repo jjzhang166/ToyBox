@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1042</width>
-    <height>786</height>
+    <width>1938</width>
+    <height>1249</height>
    </rect>
   </property>
   <property name="cursor">
@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="foodieui.qrc">
-    <normaloff>:/FoodieUI/Resouces/cake.png</normaloff>:/FoodieUI/Resouces/cake.png</iconset>
+    <normaloff>:/FoodieUI/Resources/cake.png</normaloff>:/FoodieUI/Resources/cake.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -30,9 +30,77 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="foodieui.qrc">:/FoodieUI/Resouces/food2.jpg</pixmap>
+      <pixmap resource="foodieui.qrc">:/FoodieUI/Resources/food1.jpg</pixmap>
      </property>
     </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="progressBar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Edit Mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

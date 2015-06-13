@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -24,13 +23,12 @@ class Ui_FoodieCover
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *label;
 
     void setupUi(QWidget *FoodieCover)
     {
         if (FoodieCover->objectName().isEmpty())
             FoodieCover->setObjectName(QStringLiteral("FoodieCover"));
-        FoodieCover->resize(1042, 786);
+        FoodieCover->resize(540, 528);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -39,18 +37,12 @@ public:
         FoodieCover->setMaximumSize(QSize(1938, 1218));
         FoodieCover->setCursor(QCursor(Qt::OpenHandCursor));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/FoodieUI/Resouces/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/FoodieUI/Resources/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
         FoodieCover->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(FoodieCover);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label = new QLabel(FoodieCover);
-        label->setObjectName(QStringLiteral("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resouces/kaola.png")));
-
-        verticalLayout->addWidget(label);
-
 
         retranslateUi(FoodieCover);
 
@@ -60,7 +52,6 @@ public:
     void retranslateUi(QWidget *FoodieCover)
     {
         FoodieCover->setWindowTitle(QApplication::translate("FoodieCover", "FoodieCover", 0));
-        label->setText(QString());
     } // retranslateUi
 
 };

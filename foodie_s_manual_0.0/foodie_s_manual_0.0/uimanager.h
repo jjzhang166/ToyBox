@@ -23,6 +23,7 @@ private:
 	FoodieCover* m_fc;
 	FoodieReader* m_fr;
 	FoodieEditer* m_fe;
+
 	
 };
 

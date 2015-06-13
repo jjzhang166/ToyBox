@@ -6,8 +6,11 @@ FoodieCover::FoodieCover(UiManager* um, QWidget *parent)
 {
 	ui.setupUi(this);
 	
+	//setWindowOpacity(0.8);
 	setWindowFlags(Qt::FramelessWindowHint);
-	setAttribute(Qt::WA_TranslucentBackground);
+	//setAttribute(Qt::WA_TranslucentBackground);
+	palette.setBrush(QPalette::Background, QBrush(QPixmap(":/FoodieUI/Resources/kaola.png")));
+	setPalette(palette);
 
 	show();
 }

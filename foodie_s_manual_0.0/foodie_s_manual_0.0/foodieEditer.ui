@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>FoodieUI</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="foodieui.qrc">
+    <normaloff>:/FoodieUI/Resources/cake.png</normaloff>:/FoodieUI/Resources/cake.png</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1042</width>
-    <height>786</height>
+    <width>540</width>
+    <height>528</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,20 +30,9 @@
   </property>
   <property name="windowIcon">
    <iconset resource="foodieui.qrc">
-    <normaloff>:/FoodieUI/Resouces/cake.png</normaloff>:/FoodieUI/Resouces/cake.png</iconset>
+    <normaloff>:/FoodieUI/Resources/cake.png</normaloff>:/FoodieUI/Resources/cake.png</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap resource="foodieui.qrc">:/FoodieUI/Resouces/kaola.png</pixmap>
-     </property>
-    </widget>
-   </item>
-  </layout>
+  <layout class="QVBoxLayout" name="verticalLayout"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
