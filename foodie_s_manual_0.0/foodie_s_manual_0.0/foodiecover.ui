@@ -30,9 +30,17 @@
   </property>
   <property name="windowIcon">
    <iconset resource="foodieui.qrc">
-    <normaloff>:/FoodieUI/Resources/cake.png</normaloff>:/FoodieUI/Resources/cake.png</iconset>
+    <normaloff>:/FoodieUI/Resources/foodie.png</normaloff>:/FoodieUI/Resources/foodie.png</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout"/>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>

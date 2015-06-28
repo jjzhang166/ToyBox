@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -23,6 +24,7 @@ class Ui_FoodieCover
 {
 public:
     QVBoxLayout *verticalLayout;
+    QLabel *label;
 
     void setupUi(QWidget *FoodieCover)
     {
@@ -37,12 +39,17 @@ public:
         FoodieCover->setMaximumSize(QSize(1938, 1218));
         FoodieCover->setCursor(QCursor(Qt::OpenHandCursor));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/FoodieUI/Resources/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/FoodieUI/Resources/foodie.png"), QSize(), QIcon::Normal, QIcon::Off);
         FoodieCover->setWindowIcon(icon);
         verticalLayout = new QVBoxLayout(FoodieCover);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        label = new QLabel(FoodieCover);
+        label->setObjectName(QStringLiteral("label"));
+
+        verticalLayout->addWidget(label);
+
 
         retranslateUi(FoodieCover);
 
@@ -52,6 +59,7 @@ public:
     void retranslateUi(QWidget *FoodieCover)
     {
         FoodieCover->setWindowTitle(QApplication::translate("FoodieCover", "FoodieCover", 0));
+        label->setText(QApplication::translate("FoodieCover", "TextLabel", 0));
     } // retranslateUi
 
 };

@@ -2,6 +2,10 @@
 #define FOODIECOVER_H
 
 #include <QWidget>
+#include <QPainter>
+#include <QPixmap>
+#include <QBitmap>
+#include <QMovie>
 #include <QMouseEvent>
 #include "ui_foodiecover.h"
 
@@ -22,12 +26,13 @@ private:
 	void mouseMoveEvent(QMouseEvent *evn);
 	void mouseReleaseEvent(QMouseEvent* evn);
 
+	//void paintEvent(QPaintEvent* evn);
+
 private:
 	Ui::FoodieCover ui;
 
 	QPoint dPos;
 	bool _isDrab;
-	QPalette palette;
 
 	QCursor _cursor;
 };

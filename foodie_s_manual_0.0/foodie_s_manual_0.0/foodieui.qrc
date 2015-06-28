@@ -1,8 +1,9 @@
 <RCC>
   <qresource prefix="FoodieUI">
-    <file>Resources/cake.png</file>
+    <file>Resources/collection.gif</file>
+    <file>Resources/foodie.gif</file>
+    <file>Resources/foodie.png</file>
     <file>Resources/food1.jpg</file>
     <file>Resources/food2.jpg</file>
-    <file>Resources/kaola.png</file>
   </qresource>
 </RCC>

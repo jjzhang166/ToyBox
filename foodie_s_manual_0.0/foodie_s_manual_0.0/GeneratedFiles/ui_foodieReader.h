@@ -20,6 +20,7 @@
 #include <QtWidgets/QProgressBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -29,7 +30,7 @@ class Ui_FoodieReader
 {
 public:
     QVBoxLayout *verticalLayout;
-    QLabel *label;
+    QTextEdit *textEdit;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QFrame *line;
@@ -43,21 +44,21 @@ public:
     {
         if (FoodieReader->objectName().isEmpty())
             FoodieReader->setObjectName(QStringLiteral("FoodieReader"));
-        FoodieReader->resize(1938, 1249);
+        FoodieReader->resize(526, 549);
         FoodieReader->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon;
-        icon.addFile(QStringLiteral(":/FoodieUI/Resources/cake.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QStringLiteral(":/FoodieUI/Resources/foodie.png"), QSize(), QIcon::Normal, QIcon::Off);
         FoodieReader->setWindowIcon(icon);
         FoodieReader->setAutoFillBackground(false);
         verticalLayout = new QVBoxLayout(FoodieReader);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label = new QLabel(FoodieReader);
-        label->setObjectName(QStringLiteral("label"));
-        label->setPixmap(QPixmap(QString::fromUtf8(":/FoodieUI/Resources/food1.jpg")));
+        textEdit = new QTextEdit(FoodieReader);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setReadOnly(false);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(textEdit);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
@@ -119,7 +120,15 @@ public:
     void retranslateUi(QWidget *FoodieReader)
     {
         FoodieReader->setWindowTitle(QApplication::translate("FoodieReader", "FoodieCover", 0));
-        label->setText(QString());
+        textEdit->setHtml(QApplication::translate("FoodieReader", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/FoodieUI/Resources/collection.gif\" /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; font-weight:600; color:#ff0000;\">haha</span><span style=\" font-size:10pt; font-weight:600; color:#000000;\">hagaha</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom"
+                        ":0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", 0));
         label_2->setText(QApplication::translate("FoodieReader", "TextLabel", 0));
         pushButton->setText(QApplication::translate("FoodieReader", "Edit Mode", 0));
         label_3->setText(QApplication::translate("FoodieReader", "TextLabel", 0));

@@ -154,7 +154,4 @@
   <ItemGroup>
     <ResourceCompile Include="foodie_s_manual_0.0.rc" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="Resources\cake.ico" />
-  </ItemGroup>
 </Project>

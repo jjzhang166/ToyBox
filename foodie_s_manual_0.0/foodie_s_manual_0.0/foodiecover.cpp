@@ -8,9 +8,19 @@ FoodieCover::FoodieCover(UiManager* um, QWidget *parent)
 	
 	//setWindowOpacity(0.8);
 	setWindowFlags(Qt::FramelessWindowHint);
-	//setAttribute(Qt::WA_TranslucentBackground);
-	palette.setBrush(QPalette::Background, QBrush(QPixmap(":/FoodieUI/Resources/kaola.png")));
-	setPalette(palette);
+
+	QPixmap cover;
+	cover.load(":/FoodieUI/Resources/foodie.gif");
+	resize(cover.size());
+#if 0//ÉèÖÃÕÚÕÖ£¬ÖØÔØpaintEventÏÔÊ¾±³¾°
+	setMask(cover.mask());
+#else//ÏÔÊ¾gif
+	setAttribute(Qt::WA_TranslucentBackground);
+
+	ui.label->setMovie(new QMovie(ui.label));
+	ui.label->movie()->setFileName(":/FoodieUI/Resources/foodie.gif");
+	ui.label->movie()->start();
+#endif
 
 	show();
 }
@@ -19,6 +29,13 @@ FoodieCover::~FoodieCover()
 {
 	//hide();
 }
+
+
+//void FoodieCover::paintEvent(QPaintEvent* evn)
+//{
+//	QPainter pnt(this);
+//	pnt.drawPixmap(0, 0, QPixmap(":/FoodieUI/Resources/foodie.png"));
+//}
 
 void FoodieCover::mousePressEvent(QMouseEvent *evn)
 {
